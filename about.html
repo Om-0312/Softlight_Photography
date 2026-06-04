@@ -20,13 +20,9 @@
       border-radius: 50%;
       box-shadow: 0 4px 24px rgba(0,0,0,0.13);
       border: 4px solid #ffb347;
-      
-      /* --- THE FIX IS HERE --- */
       width: 250px; 
       height: 250px;
-      object-fit: cover; /* This makes it a perfect circle without stretching the photo! */
-      /* ----------------------- */
-      
+      object-fit: cover;
       margin-bottom: 18px;
     }
     .about-text {
@@ -99,6 +95,7 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
   </header>
 
   <main id="main-content" role="main">
@@ -113,7 +110,7 @@
         
         <div class="about-text">
           <h2>Behind the Lens</h2>
-          <p>Hello! I’m Bharat Kamble, the founder of Softlight Photography. Based in Chh.Sambhajinagar, I specialize in wedding, maternity, and creative storytelling photography. My goal is simple: to turn your moments into timeless memories. Whether it's a joyful wedding or an intimate maternity shoot, I strive to capture raw emotion, light, and detail in every frame.</p>
+          <p>Hello! I'm Bharat Kamble, the founder of Softlight Photography. Based in Chh.Sambhajinagar, I specialize in wedding, maternity, and creative storytelling photography. My goal is simple: to turn your moments into timeless memories. Whether it's a joyful wedding or an intimate maternity shoot, I strive to capture raw emotion, light, and detail in every frame.</p>
           <p>With years of experience and a passion for people and stories, Softlight Photography ensures each project feels personal, beautiful, and unforgettable.</p>
           <ul>
             <li>5+ years of professional photography experience</li>
@@ -161,7 +158,10 @@
     <p style="margin-top:10px;">© 2026 Softlight Photography | Designed by Om Dhengle</p>
   </footer>
 
+  <button id="backToTop" title="Back to top">&#8679;</button>
+
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init();</script>
+  <script src="js/script.js"></script>
 </body>
 </html>

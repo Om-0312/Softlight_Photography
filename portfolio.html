@@ -21,6 +21,7 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
   </header>
 
   <section class="page-banner" data-aos="fade-down">
@@ -33,39 +34,49 @@
     <p style="max-width:600px;margin:10px auto 30px;color:#555;">
       A selection of our favorite moments from weddings, maternity, pre-wedding shoots, and kids photography.
     </p>
+
+    <!-- FILTER BUTTONS -->
+    <div class="portfolio-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="wedding">Wedding</button>
+      <button class="filter-btn" data-filter="prewedding">Pre-Wedding</button>
+      <button class="filter-btn" data-filter="maternity">Maternity</button>
+      <button class="filter-btn" data-filter="kids">Kids</button>
+      <button class="filter-btn" data-filter="candid">Candid</button>
+    </div>
+
     <div class="gallery-grid">
-      <a href="images/portfolio-kids1.jpg" data-lightbox="gallery" data-title="Classic Wedding Photography">
+      <a href="images/portfolio-kids1.jpg" data-lightbox="gallery" data-title="Classic Wedding Photography" data-category="wedding">
         <img src="images/portfolio-kids1.jpg" alt="Classic Wedding Photography" loading="lazy" data-aos="zoom-in" data-aos-delay="100">
       </a>
-      <a href="images/portfolio-candid.jpg" data-lightbox="gallery" data-title="Raw Candid Moments">
+      <a href="images/portfolio-candid.jpg" data-lightbox="gallery" data-title="Raw Candid Moments" data-category="candid">
         <img src="images/portfolio-candid.jpg" alt="Raw Candid Moments" loading="lazy" data-aos="zoom-in" data-aos-delay="250">
       </a>
-      <a href="images/portfolio-prewedding.jpg" data-lightbox="gallery" data-title="Romantic Pre-Wedding Shoot">
+      <a href="images/portfolio-prewedding.jpg" data-lightbox="gallery" data-title="Romantic Pre-Wedding Shoot" data-category="prewedding">
         <img src="images/portfolio-prewedding.jpg" alt="Romantic Pre-Wedding Shoot" loading="lazy" data-aos="zoom-in" data-aos-delay="150">
       </a>
-      <a href="images/portfolio-maternity.jpg" data-lightbox="gallery" data-title="Beautiful Maternity Memories">
+      <a href="images/portfolio-maternity.jpg" data-lightbox="gallery" data-title="Beautiful Maternity Memories" data-category="maternity">
         <img src="images/portfolio-maternity.jpg" alt="Beautiful Maternity Memories" loading="lazy" data-aos="zoom-in" data-aos-delay="200">
       </a>
-      <a href="images/portfolio-kids2.jpg" data-lightbox="gallery" data-title="Kids & Baby Photography">
+      <a href="images/portfolio-kids2.jpg" data-lightbox="gallery" data-title="Kids & Baby Photography" data-category="kids">
         <img src="images/portfolio-kids2.jpg" alt="Kids Photography 2" loading="lazy" data-aos="zoom-in" data-aos-delay="400">
       </a>
-      <a href="images/portfolio-kids3.jpg" data-lightbox="gallery" data-title="Kids & Baby Photography">
+      <a href="images/portfolio-kids3.jpg" data-lightbox="gallery" data-title="Kids & Baby Photography" data-category="kids">
         <img src="images/portfolio-kids3.jpg" alt="Kids Photography 3" loading="lazy" data-aos="zoom-in" data-aos-delay="450">
       </a>
-      <a href="images/portfolio-kids4.jpg" data-lightbox="gallery" data-title="Kids & Baby Photography">
+      <a href="images/portfolio-kids4.jpg" data-lightbox="gallery" data-title="Kids & Baby Photography" data-category="kids">
         <img src="images/portfolio-kids4.jpg" alt="Kids Photography 4" loading="lazy" data-aos="zoom-in" data-aos-delay="500">
       </a>
-      <a href="images/portfolio-kids5.jpg" data-lightbox="gallery" data-title="Kids & Baby Photography">
+      <a href="images/portfolio-kids5.jpg" data-lightbox="gallery" data-title="Kids & Baby Photography" data-category="kids">
         <img src="images/portfolio-kids5.jpg" alt="Kids Photography 5" loading="lazy" data-aos="zoom-in" data-aos-delay="550">
       </a>
-      <a href="images/portfolio-wedding.jpg" data-lightbox="gallery" data-title="Kids & Baby Photography">
-        <img src="images/portfolio-wedding.jpg" alt="Kids Photography 1" loading="lazy" data-aos="zoom-in" data-aos-delay="350">
+      <a href="images/portfolio-wedding.jpg" data-lightbox="gallery" data-title="Wedding Photography" data-category="wedding">
+        <img src="images/portfolio-wedding.jpg" alt="Wedding Photography" loading="lazy" data-aos="zoom-in" data-aos-delay="350">
       </a>
-      <a href="images/portfolio-group.jpg" data-lightbox="gallery" data-title="Family & Friends Group Photos">
+      <a href="images/portfolio-group.jpg" data-lightbox="gallery" data-title="Family & Friends Group Photos" data-category="candid">
         <img src="images/portfolio-group.jpg" alt="Family & Friends Group Photos" loading="lazy" data-aos="zoom-in" data-aos-delay="300">
       </a>
-      
-      </div>
+    </div>
   </section>
 
   <section class="video-section" data-aos="fade-up">
@@ -99,8 +110,11 @@
     <p>© 2026 Softlight Photography | Designed by Om Dhengle</p>
   </footer>
 
+  <button id="backToTop" title="Back to top">&#8679;</button>
+
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init();</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

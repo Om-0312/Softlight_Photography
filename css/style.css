@@ -522,4 +522,127 @@ blockquote {
   background: #ffb347;
   border-radius: 8px;
 }
+/* =============================================
+   ADDITIONS FOR style.css  — paste at the bottom
+   Features: Hamburger | Filter Btns | Back-to-Top |
+             Typewriter | Form Error Messages
+   ============================================= */
+
+/* --- Hamburger Button --- */
+.hamburger {
+  display: none;
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+  line-height: 1;
+}
+.hamburger:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+@media (max-width: 700px) {
+  .hamburger {
+    display: block;          /* show on mobile */
+  }
+  header {
+    flex-direction: row;     /* logo left, burger right */
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+
+/* --- Portfolio Filter Buttons --- */
+.portfolio-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0 30px;
+}
+
+.filter-btn {
+  background: #f0f0f0;
+  color: #333;
+  border: 2px solid transparent;
+  padding: 8px 22px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.filter-btn:hover {
+  border-color: #ff5050;
+  color: #ff5050;
+}
+.filter-btn.active {
+  background: linear-gradient(90deg, #ff5050 60%, #ffb347 100%);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(255,80,80,0.25);
+}
+
+/* Fade-in keyframe for filtered items */
+@keyframes filterFadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1);    }
+}
+
+
+/* --- Back-to-Top Button --- */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(135deg, #ff5050, #ffb347);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: none;               /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(255,80,80,0.3);
+  transition: opacity 0.3s, transform 0.2s;
+  opacity: 0;
+  z-index: 999;
+}
+#backToTop.visible {
+  display: flex;
+  opacity: 1;
+}
+#backToTop:hover {
+  transform: translateY(-3px) scale(1.08);
+}
+
+
+/* --- Typewriter cursor blink --- */
+.typewriter-cursor::after {
+  content: '|';
+  animation: blink 0.7s step-start infinite;
+  color: #ff5050;
+  margin-left: 3px;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+
+/* --- Form Error Messages --- */
+.error-msg {
+  color: #ff5050;
+  font-size: 0.83rem;
+  margin-top: -8px;
+  display: block;
+  font-weight: 500;
+}
 
